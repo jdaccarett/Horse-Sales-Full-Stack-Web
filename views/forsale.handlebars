@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>For Sale</title>
+    <link rel="stylesheet" href="css/salesTableStyle.css">
+    <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+</head>
+
+<body>
+    <div id="navdiv">
+        <!--Nav Bar-->
+        <nav class="navbar alignRight">
+            <ul class="nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="http://localhost:3009/forsale">Horses Available</a></li>
+                <li><a href="/">Test</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section>
+        <div class="table-title">
+            <h3>Horses For Sale</h3> </div>
+        <table class="table-fill">
+            <thead>
+                <tr id="list" class="List">
+                    <th class="text-left">ID</th>
+                    <th class="text-left">Asking_Price</th>
+                    <th class="text-left">Age</th>
+                    <th class="text-left">Breed</th>
+                    <th class="text-left">Owner</th>
+                    <th class="text-left">Contact</th>
+                    <th class="text-left">state</th>
+                    <th class="text-left">city</th>
+                    <th class="text-left">Medical_Records</th>
+                </tr>
+            </thead>
+            <tbody class="table-hover"> {{#each results}}
+                <tr>
+                    <td>{{ID}}</td>
+                    <td>${{Asking_Price}}</td>
+                    <td>{{Age}}</td>
+                    <td>{{Breed}}</td>
+                    <td>{{Owner}}</td>
+                    <td>{{Contact}}</td>
+                    <td>{{state}}</td>
+                    <td>{{city}}</td>
+                    <td>{{Medical_Records}}</td>
+                </tr> {{/each}} </tbody>
+        </table>
+    </section>
+</body>
+<!-- citation by http://codepen.io/alassetter/pen/cyrfB-->
+  
+</html>

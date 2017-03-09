@@ -1,0 +1,116 @@
+
+
+/* HELPER CLASSES BEGIN */
+.alignLeft {
+    float: left;
+}
+
+.alignRight {
+    float: right;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.margin-bottom-30 {
+    margin-bottom: 30px;
+}
+
+.margin-bottom-40 {
+    margin-bottom: 40px;
+}
+
+strong,
+b {
+    font-weight: 700;
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+p,
+ul li,
+ol li {
+    font-size: 17px;
+    line-height: 24px;
+}
+
+/*HELPER CLASSES END*/
+
+
+/* GENERAL RULES*/
+body {
+  background-color: #3e94ec;
+  font-family: "Roboto", helvetica, arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+    max-width:100%;
+    max-height:100%;
+}
+
+.frontFont{
+    height: 185px;
+    width: 800px;
+}
+
+
+.container {
+    max-width: 1908px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.logo-img {
+    width: 100px;
+    height: 80px;
+}
+
+#navdiv {
+    width: 90%;
+    height: 50px;
+    margin: 0 auto;
+}
+
+nav li {
+    float: left;
+    display: inline-block;
+    font-weight: 500;
+}
+
+nav li a {
+    color: white;
+    font-family: 'HelveticaNeue-Thin';
+    font-size: 25px;
+    text-transform: capitalize;
+    text-decoration: none;
+    margin-left: 30px;
+    padding-bottom: 3px;
+    border-bottom: 3px solid white transparent;
+    transition: border-bottom 0.1s, color 0.1s;
+
+}
+
+nav li a:hover {
+    border-bottom: 3px solid brown;
+    transition: border-bottom 0.1s, color 0.1s;
+}
+
+
+.cta {
+    display: inline-block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 200px;
+}

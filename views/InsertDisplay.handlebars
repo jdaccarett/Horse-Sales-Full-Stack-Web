@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Breeds</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+      
+       <div id="navdiv">
+            <!--Nav Bar-->
+           <nav class="navbar alignRight">
+            <ul class="nav">
+                <li><a href="http://localhost:3009/">Home</a></li>
+                <li><a href="http://localhost:3009/Breeds">Available Breeds</a></li>
+                <li><a href="http://localhost:3009/user">User Info</a></li>
+            </ul>
+        </nav>
+
+       </div>
+        
+    <section>    
+         <h1>Insert Display</h1>
+        <input type="text" id="filter" placeholder="Type to filter"/>
+        <ul id="list" class="List"> 
+           {{#each results}}
+            <li style="list-style-type: none;">{{this}}</li> 
+            {{/each}} 
+        </ul>
+    </section>
+    
+</body>
+<!--  JAVASCRIPT FILTER FUNCTIONALIY FOR HORSE BREEDS-->
+<!-- citation by http://codepen.io/hmps/pen/sBfzg-->
+  <script language="javascript">
+    var filter = document.getElementById('filter');
+    var list = document.getElementById('list');
+    var listItems = document.querySelectorAll('li');
+
+
+    //filter.focus();
+    filter.addEventListener('keyup', function(e) {
+    
+    var val = new RegExp(e.target.value, 'gi');
+    for(var i=0; i<listItems.length; i++){
+        
+        if( e.target.value.length > 0) {
+        
+            var text = listItems[i].innerHTML;
+    
+            if( !text.match(val)) {
+                listItems[i].classList.add('is-hidden');
+            } 
+            else {
+                listItems[i].classList.remove('is-hidden');
+            }
+    } else {
+        listItems[i].classList.remove('is-hidden');
+      }    
+  }
+});
+</script>  
+</html>

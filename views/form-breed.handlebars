@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+<h1>Fill out Horse Breed and Country of Origin</h1>
+<div class="form-group">
+
+    <form action="/form">
+        <br>
+        <input type="text" name="Type" id="Type" placeholder="Breed Type">
+        <br>
+        <input type="text" name="country" id="country" placeholder="Country of Origin">
+        <br>
+        <br>
+        <input type="submit" id="submit" value="Submit"> </form>
+        
+    <div class="form-group">
+        <button id="next"><a href="http://localhost:3009/address">NEXT STEP</a></button>
+    </div>
+</div>
+</body>
+<script>
+    var submit = document.getElementById('submit');
+    var next = document.getElementById('next');
+    
+
+        document.getElementById('submit').addEventListener('click', function (event) {
+            next.style.display = 'block';
+            next.style.backgroundColor = "mediumspringgreen";
+        });
+</script>
+</html>
