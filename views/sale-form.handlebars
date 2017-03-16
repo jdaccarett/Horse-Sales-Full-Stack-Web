@@ -5,16 +5,17 @@
     <title>Address</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
       
        <div id="navdiv">
             <!--Nav Bar-->
            <nav class="navbar alignRight">
             <ul class="nav">
-                <li><a href="/">Home</a></li>
-                <li><a href="http://localhost:3009/Breeds">Breeds</a></li>
-                <li><a href="/">Test</a></li>
+                <li><a href="http://localhost:3009/">Home</a></li>
+                <li><a href="http://localhost:3009/forsale">For Sale</a></li>
+                <li><a href="http://localhost:3009/Update">Change Price</a></li>
+                <li><a href="http://localhost:3009/Insert">Add Horse</a></li>
+                <li><a href="http://localhost:3009/Search">Search By Price</a></li>
             </ul>
         </nav>
 
@@ -22,7 +23,7 @@
             
 <div class="form-group">
  
- <form action="/sale-form">
+ <form action="/add-horse" >
   
  <h3>Owner's Info</h3>
  
@@ -30,37 +31,37 @@
          name="email" 
          class="form-control" 
          id="email" 
-         placeholder="email">
+         placeholder="email" required>
   
   <input type="first_name"
          name="first_name" 
          class="form-control" 
          id="first_name" 
-         placeholder="First Name">
+         placeholder="First Name" required>
   
   <input type="last_name"
          name="last_name" 
          class="form-control" 
          id="last_name" 
-         placeholder="Last Name">
+         placeholder="Last Name" required>
   
   <input type="number"
          name="phone_number" 
          class="form-control" 
          id="phone" 
-         placeholder="Phone Number">
+         placeholder="Phone Number" required>
 
 <h3>Horse's Breed and Country of Origin</h3>
   <input type="text" 
          name="Type"
          class="form-control" 
          id="Type" 
-         placeholder="Breed">
+         placeholder="Breed" required>
   
     <input type="text" 
          name="country"
          id="country" 
-         placeholder="Country of Origin">
+         placeholder="Country of Origin" required>
 
 
 
@@ -70,31 +71,31 @@
          name="street" 
          class="form-control" 
          id="autocomplete" 
-         placeholder="Street">
+         placeholder="Street" required>
   
   <input type="city"
          name="city" 
          class="form-control" 
          id="inputCity" 
-         placeholder="City">
+         placeholder="City" required>
   
   <input type="state"
          name="state"
          class="form-control" 
          id="inputState" 
-         placeholder="State">
+         placeholder="State" required>
   
   <input type="zip"
          name="zipcode" 
          class="form-control" 
          id="inputZip" 
-         placeholder="Zip">
+         placeholder="Zip" required>
   
   <input type="country"
          name="country_of_stay" 
          class="form-control" 
          id="inputCountry" 
-         placeholder="Country">
+         placeholder="Country" required>
 
 
 <h3>Horse's Info</h3>
@@ -103,32 +104,49 @@
          name="age"
          class="form-control" 
          id="inputage" 
-         placeholder="age">
+         placeholder="age" required>
   
   <input type="text"
          name="bio" 
          class="form-control" 
          id="inputBio" 
-         placeholder="short bio">
+         placeholder="short bio" required>
   
   <input type="text"
          name="price" 
          class="form-control" 
          id="inputPrice" 
-         placeholder="Enter Price">
+         placeholder="Enter Price" required>
 
 
+<h3>Add Medical Records</h3>
+ 
+  <input type="text"
+         name="records"
+         class="form-control" 
+         id="inputRecords" 
+         placeholder="Medical Records" required>
 
+    <button type="submit" id="submit" value="Submit">Click</button>
 
-  <input id="submit" type="submit"  value="Submit">
      
  </form>
-
+    
+    <div class="form-group">
+        <button style="display: none;" id="next">NEXT STEP</a></button>
+    </div>
           
 </div>
 
-  
-    
+ 
 </body>
-
+<script>
+    var submit = document.getElementById('submit');
+    var next = document.getElementById('next');
+    
+        document.getElementById('submit').addEventListener('click', function (event) {
+            next.style.display = 'block';
+            next.style.backgroundColor = "mediumspringgreen";
+        });
+</script>   
 </html>

@@ -8,20 +8,20 @@
 </head>
 
 <body>
-<h1>Your hourse info</h1>
+<h1>Change Horse Price</h1>
 <div class="form-group">
 
-    <form action="/horse">
+    <form action="/price-change">
         <br>
-        <input type="text" name="Type" id="Type" placeholder="Breed Type">
+        <input type="text" name="animal_id" id="animal_id" placeholder="Enter Horse ID">
         <br>
-        <input type="text" name="country" id="country" placeholder="Country of Origin">
+        <input type="text" name="price" id="price" placeholder="Enter New Price">
         <br>
         <br>
         <input type="submit" id="submit" value="Submit"> </form>
         
     <div class="form-group">
-        <button id="next"><a href="http://localhost:3009/address">NEXT STEP</a></button>
+        <button style="display: none;" id="next" onclick="window.location.href='/forsale'">CLICK TO CONTINUE</button>
     </div>
 </div>
 </body>
